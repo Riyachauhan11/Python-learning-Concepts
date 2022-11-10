@@ -30,9 +30,9 @@ class Car(Vehicle):
 
 obj1 = Car(2019, 'Tesla', 'electric', True, True)
 print(obj1.__dict__)
-print(obj1.show_parent_attribute())
+obj1.show_parent_attribute()
 print(obj1.make)
 # print(obj1.__model,obj1.model) - both will throw an error
 # print(obj1.__private_method_parent) will also throw error
-print(obj1.show_privatemethod_ofparent())
-print(obj1._Vehicle__private_method_parent())
+obj1.show_privatemethod_ofparent()
+obj1._Vehicle__private_method_parent()
