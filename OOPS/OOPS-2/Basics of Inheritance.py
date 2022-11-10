@@ -23,5 +23,5 @@ class Car(Vehicle):
 
 obj1 = Car(2019, 'Tesla', 'electric', True, True)
 print(obj1.__dict__)
-print(obj1.show_parent_attribute())
+obj1.show_parent_attribute()
 print(obj1.make)
