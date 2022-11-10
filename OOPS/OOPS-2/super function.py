@@ -22,5 +22,5 @@ class Car(Vehicle):
 
 obj1 = Car(2019, 'Tesla', 'electric', True, True)
 print(obj1.__dict__)
-print(obj1._Vehicle__private_method_parent())
+obj1._Vehicle__private_method_parent()
 print(obj1.make)
