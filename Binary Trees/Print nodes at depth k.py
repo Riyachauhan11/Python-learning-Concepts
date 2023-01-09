@@ -1,5 +1,5 @@
 '''root is at depth 0 and the level right under root is at depth 1 so the depth increases 
-the further we move down in the tree as per the level.'''
+the further we move down in the tree as per the level.''' 
 
 class BinaryTreeNode:
     def __init__(self, data):
@@ -42,7 +42,7 @@ def PrintDepthK(root,k):
     PrintDepthK(root.left,k-1)
     PrintDepthK(root.right,k-1)
 
-
+#2nd soln (personal better)
 def PrintDepthK2(root,k,d=0):
     if root==None:
         return
