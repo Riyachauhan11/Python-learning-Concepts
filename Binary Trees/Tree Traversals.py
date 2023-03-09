@@ -41,6 +41,37 @@ def InOrder(root):
     InOrder(root.left)
     print(root.data,end=" ")
     InOrder(root.right)
+	
+
+	
+#Level order traversal: Elements on every level will be printed in a linear fashion and a single space will separate them.
+def printLevelWise(root):
+    #Your code goes here
+    if root is None:
+        return
+
+    pendingNodes = queue.Queue()
+    pendingNodes.put(root)
+    pendingNodes.put(None)
+
+    while not pendingNodes.empty():
+        frontNode = pendingNodes.get()
+
+        if frontNode is None:
+            print()
+
+            if not pendingNodes.empty():
+                pendingNodes.put(None)
+
+        else:
+            print(frontNode.data, end=" ")
+
+            if frontNode.left is not None:
+                pendingNodes.put(frontNode.left)
+
+            if frontNode.right is not None:
+                pendingNodes.put(frontNode.right)
+
     
     
     
