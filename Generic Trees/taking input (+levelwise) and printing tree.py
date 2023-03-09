@@ -21,6 +21,28 @@ def takeTreeInput():
     return root
 
 
+def takeTreeInputLevelWise():
+    q=queue.Queue()
+    print("enter root")
+    rootData=int(input())
+    if rootData==-1:
+        return None
+    
+    root=TreeNode(rootData)
+    q.put(root)
+    while (not(q.empty())):
+        current_node=q.get()
+        print("Enter num of children for ",current_node.data)
+        numChildren=int(input())
+        for i in range(numChildren):
+            print("Enter next child for ",current_node.data)
+            childData=int(input())
+            child=TreeNode(childData)
+            current_node.children.append(child)
+            q.put(child)
+    return root
+
+
 '''printing data in preorder'''
 def printTree(root):
 
