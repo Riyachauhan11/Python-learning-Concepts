@@ -70,6 +70,42 @@ def printTreeDetailed(root):
     for child in root.children:
         printTreeDetailed(child)
         
+'''print all nodes in the level order form in different lines.
+
+Sample Input 1:
+
+10 3 20 30 40 2 40 50 0 0 0 0 
+
+Sample Output 1:
+
+10:20,30,40
+20:40,50
+30:
+40:
+40:
+50:
+
+'''
+def printLevelWiseTree(tree):
+    #############################
+    # PLEASE ADD YOUR CODE HERE #
+    #############################
+    q=queue.Queue()
+    
+    q.put(tree)
+    while (not(q.empty())):
+        current_node=q.get()
+        print(current_node.data,end=':')
+        for child in current_node.children:
+            if child!=current_node.children[-1]:
+                print(child.data,end=',')
+            else:
+                print(child.data,end='')
+            q.put(child)
+        print()
+       
+        
+        
 root=takeTreeInput()
 printTreeDetailed(root)
 
