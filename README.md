@@ -1,2 +1,2 @@
-# Python-Concepts
-Built programs to have a better understanding of several concepts or topics in python
+# Python Learning Concepts
+Built programs to have a basic understanding of several concepts or topics in python.
